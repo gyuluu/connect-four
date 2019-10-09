@@ -10,4 +10,4 @@ I created a web-based version of the physical game as part of the Full Stack Cod
 
 ## Demo:
 
-[! (https://i.gyazo.com/83e4f48c40d24786532dddb221e87ef3.gif)](https://gyazo.com/83e4f48c40d24786532dddb221e87ef3)
+[![Connect 4 Preview](https://i.gyazo.com/83e4f48c40d24786532dddb221e87ef3.gif)](https://gyazo.com/83e4f48c40d24786532dddb221e87ef3)
