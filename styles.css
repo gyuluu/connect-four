@@ -1,0 +1,172 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.slot {
+    width: 90px;
+    height: 90px;
+    background-color: #0074d9;
+}
+
+.slot-hover {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+}
+
+@-webkit-keyframes slotwin {
+    0% {
+        background-color: #00ff00;
+    }
+    22% {
+        background-color: #00ffff;
+    }
+    77% {
+        background-color: #00ff00;
+    }
+    100% {
+        background-color: #00ffff;
+    }
+}
+
+.slot-win {
+    -webkit-animation-name: slotwin;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-iteration-count: 5;
+    -webkit-animation-timing-function: ease-in-out;
+}
+
+#container {
+    position: relative;
+    min-height: 100wh;
+}
+
+#board-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    margin-top: 30px;
+    display: flex;
+}
+
+.hole {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: white;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+.hole-hover {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-color: white;
+    position: relative;
+    left: 10px;
+    top: 10px;
+}
+
+.hole-hover.hover-red {
+    background-color: #ff4136;
+}
+
+.hole-hover.hover-yellow {
+    background-color: #ffdc00;
+}
+
+.player1 .hole {
+    background-color: #ff4136;
+}
+
+.player2 .hole {
+    background-color: #ffdc00;
+}
+
+.anim {
+    transform: scale(4);
+    background-color: white;
+    transition: transform 2s ease-out;
+}
+
+#winner-red {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 666;
+    display: flex;
+    align-items: center;
+}
+
+#red {
+    padding: 20px 0px;
+    background-color: red;
+    width: 100%;
+    color: white;
+    font-size: 7em;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue";
+}
+
+#winner-yellow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.35);
+    z-index: 666;
+    display: flex;
+    align-items: center;
+}
+
+#yellow {
+    padding: 20px 0px;
+    background-color: yellow;
+    width: 100%;
+    color: black;
+    font-size: 7em;
+    font-style: italic;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Helvetica Neue";
+}
+
+#winner-yellow.on {
+    visibility: visible;
+}
+
+#winner-red.on {
+    visibility: visible;
+}
+
+.button {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 0.2em;
+    padding: 10px 20px;
+    border: none;
+    text-decoration: none;
+    border-radius: 4px;
+}
